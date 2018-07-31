@@ -1,0 +1,42 @@
+.persons-container{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #353134;
+}
+.persons-list{
+  background: #353134;
+  overflow: auto;
+  margin-left: 5em;
+}
+.mat-grid-tile .mat-grid-tile-footer, .mat-grid-tile .mat-grid-tile-header{
+  left: auto;
+  right: auto;
+  top: auto;
+  width: available;
+  font-size: small;
+}
+.list-container{
+  display: block;
+}
+.mat-card-image {
+  width: calc(100% + 48px);
+  margin: 0 -24px 16px -24px;
+}
+.mat-grid-tile {
+  padding: 0px;
+  margin: 0px;
+}
+.persons-toolbar{
+  position: fixed;
+  z-index: 2;
+  background: #353134;
+}
+.person-tile{
+  width: 250px !important;
+}
+

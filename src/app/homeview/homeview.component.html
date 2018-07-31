@@ -1,0 +1,40 @@
+
+<div class="main-container">
+
+  <mat-progress-bar mode="indeterminate" *ngIf="progressOn"></mat-progress-bar>
+
+  <mat-sidenav-container class="sidenav-container" hasBackdrop="false">
+    <mat-sidenav #snav mode="push">
+      <mat-nav-list [disableRipple]="false" >
+        <mat-list-item class="list-item" *ngFor="let category of categoriesToDisplay"
+                       [class.selected]="category === categorySelected">
+          <a routerLink="/{{category.toLowerCase().replace(' ','_')}}"><h3>{{category}}</h3></a>
+        </mat-list-item>
+        <a routerLink="/persons">
+          <mat-list-item>
+            <h3>Persons Module</h3>
+          </mat-list-item>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="sidenav-content">
+      <mat-toolbar  class="mat-toolbar">
+        <button  mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        <h1 class="app-name">Drawer Title</h1>
+      </mat-toolbar>
+
+      <!--<div class="search-results" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" [scrollWindow]="true" (scrolled)="getMovies(categorySelected,pageNum)">-->
+      <mat-grid-list cols="3" gutterSize="1">
+        <mat-grid-tile *ngFor="let movie of movies">
+          <a routerLink="/movie/{{movie.id}}">
+          <mat-card class="card">
+            <img class="grid-list-image" mat-card-image src="https://image.tmdb.org/t/p/w185{{movie.poster_path}}"/>
+          </mat-card>
+            <h4>{{movie.title}}</h4>
+          </a>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

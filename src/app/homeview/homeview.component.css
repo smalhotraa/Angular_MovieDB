@@ -1,0 +1,76 @@
+.main-container{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.grid-list-image{
+  width: fit-content;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.h1{
+  color: white;
+}
+.sidenav-content{
+  background: #353134;
+  flex: 1;
+}
+.selected{
+  background-color: lightblue;
+}
+.mat-nav-list{
+  margin: 2em;
+}
+.card{
+
+}
+.button{
+  background: transparent;
+}
+.mat-sidenav{
+  background: #353134;
+}
+.mat-icon menu{
+  color: #7921f8;
+}
+.mat-card{
+  background: transparent !important;
+}
+h3{
+  color: white;
+}
+
+.list-item{
+  margin: 2em;
+  width: 15em;
+}
+
+h4{
+  color: white;
+  font-family: "Noto Sans";
+   padding-left: 64px;
+   width: 120px;
+}
+.mat-toolbar{
+  position: fixed;
+  z-index: 2;
+  background-color: #353134;
+}
+
+h1.app-name{
+  margin-left: 8px;
+  color: white;
+}
+
+.sidenav-container{
+  flex: 5;
+}
+

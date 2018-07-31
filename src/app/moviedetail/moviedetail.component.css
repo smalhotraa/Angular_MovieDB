@@ -1,0 +1,107 @@
+.movie-detail-container{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #353134;
+}
+.mat-card-image {
+  width: calc(100% + 24px);
+  margin: 0 -12px 8px -12px;
+}
+.mat-grid-tile {
+  padding: 0px;
+  margin: 0px;
+}
+.toolbar-md{
+  background-color: #353134;
+  position: fixed;
+  z-index: 2;
+}
+.mat-grid-tile .mat-grid-tile-footer, .mat-grid-tile .mat-grid-tile-header{
+  left: auto;
+  right: auto;
+  font-size: small;
+}
+
+.trailer-image:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  background: #ffffff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEFSURBVEhL3dVLCsJAEATQgOjCs3gVRfxuvY6fO7jxcyAXKuolRNdaBTaETNmZDLrQggch6ZnATKaT/X0aMIItHOD2wusN8BlrkjKAMzxKnKAP0anBHNRkHo7h2NIsQE0QYwZuuCxqYBVdkOFmXUANop24p3Df6hBkDGqAacKycO+dIQThZ6eKjWUCd1A1ZgVBjqCKTT4t8JaMcwW5gio2xXhLxrmCfP0Fn1witpIga1DFxpK8yWxcqthU+Ux5YIPwoHnNLfagsfnJg8b0QA2qogNuUjqpmUJp2HLZFdUEHk4e1a4t7IpcTzVZHmvakBRuPBsXP7s92C+T17zHZ8m/zF9Ilj0B+IscMdZMI+wAAAAASUVORK5CYII=");
+}
+
+.mat-tab-label, .mat-tab-link {
+  color: white !important;
+}
+.cast-image{
+  margin-bottom: -3em;
+}
+.video-list-item{
+  padding: 0px;
+  margin: 0px;
+}
+.tab-group{
+  color: white;
+  font-size: large;
+  margin-right: 2em;
+}
+
+.mat-grid-list{
+  margin-top: 2em;
+}
+.cast-container{
+  overflow: auto;
+}
+.movie-text {
+  color: white;
+  font-family: "Noto Sans"
+}
+.content-container{
+  background: #353134;
+  display: block;
+}
+.detail-container{
+  margin-top: 5em;
+}
+.mat-tab{
+  color: white;
+}
+p{
+  color: #939598 !important;
+  font-size: small;
+  font-family: Monaco, "Lucida Console", monospace;
+}
+
+h1{
+  padding: 0px;
+  margin: 0px;
+}
+h4{
+  padding: 0px;
+  margin: 0.2px;
+  margin-top: 1em;
+  font-size: larger;
+}
+.image-container{
+  height: 100%;
+  width: 40%;
+  margin-top: 2em;
+  margin-left: 10em;
+  margin-bottom: 2em;
+  float: left;
+  elevation: higher;
+  background-color: #353134;
+}
+.poster-container{
+  width: 550px;
+  height: auto;
+  elevation: higher;
+  background: #353134;
+}
+
+.over-view-container{
+  margin-top: 2em;
+}

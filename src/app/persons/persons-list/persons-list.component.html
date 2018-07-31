@@ -1,0 +1,18 @@
+<div class="persons-container">
+  <mat-progress-bar mode="indeterminate" ></mat-progress-bar>
+
+  <mat-toolbar  class="persons-toolbar">
+    <h1 class="app-name">Popular Persons</h1>
+  </mat-toolbar>
+
+  <div class="persons-list" *ngIf="this.personResponse">
+   <mat-grid-list class="list-container" [cols]="4" gutterSize="20">
+     <div *ngFor="let person of this.personResponse.results">
+        <mat-grid-tile class="person-tile">
+          <img mat-card-image src="https://image.tmdb.org/t/p/w185{{person.profile_path}}"/>
+          <mat-grid-tile-footer>{{person.name}}</mat-grid-tile-footer>
+        </mat-grid-tile>
+     </div>
+    </mat-grid-list>
+  </div>
+</div>

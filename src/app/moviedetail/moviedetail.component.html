@@ -1,0 +1,76 @@
+<div class="movie-detail-container">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+
+  <mat-toolbar class="toolbar-md">
+    <button mat-icon-button (click)="goBack()"><mat-icon>arrow_back</mat-icon></button><br>
+  </mat-toolbar>
+  <div class="content-container">
+    <div class="image-container" *ngIf="this.movieDetails">
+      <img  class="poster-container"  src="https://image.tmdb.org/t/p/w780{{this.movieDetails.poster_path}}">
+    </div>
+
+    <div class="detail-container" *ngIf="this.movieDetails">
+
+      <h1 class="movie-text">{{this.movieDetails.title}}</h1>
+      <h4 class="movie-text">{{this.movieDetails.tagline}}</h4>
+      <h5 class="movie-text">{{this.movieDetails.runtime}} mins | {{this.genres}}</h5>
+
+      <mat-tab-group class="tab-group" [dynamicHeight]="true" mat-stretch-tabs >
+        <mat-tab  label="Overview" >
+          <div class="over-view-container">
+            <h4 class="movie-text">Description</h4>
+            <p class="movie-text">{{this.movieDetails.overview}}</p>
+
+            <h4 class="movie-text">Release Date</h4>
+            <p class="movie-text">{{this.movieDetails.release_date}}</p>
+
+            <div class="cast-container" *ngIf="this.castListResponse">
+              <h4 class="movie-text">Cast</h4>
+              <mat-grid-list class="content-container" cols="4" gutterSize="20">
+                <div *ngFor="let cast of this.castListResponse.cast" >
+                <mat-grid-tile  *ngIf="cast.profile_path" >
+                  <img  class="cast-image" mat-card-image src="https://image.tmdb.org/t/p/w185{{cast.profile_path}}" />
+                  <mat-grid-tile-footer>{{cast.name}} as {{cast.character}}</mat-grid-tile-footer>
+                </mat-grid-tile>
+                </div>
+              </mat-grid-list>
+            </div>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Trailers & Clips" >
+          <div class="cast-container" *ngIf="this.movieDetails">
+            <mat-grid-list class="content-container" cols="4" gutterSize="20">
+              <div *ngFor="let video of this.movieDetails.videos.results" >
+                <mat-grid-tile (click)="openDialog(video)" class="trailer-tile"  *ngIf="video.key" >
+                  <img class="trailer-image" mat-card-image src="https://img.youtube.com/vi/{{video.key}}/maxresdefault.jpg" />
+                  <mat-grid-tile-footer class="trailer-name-footer">{{video.name}}</mat-grid-tile-footer>
+                </mat-grid-tile>
+              </div>
+            </mat-grid-list>
+          </div>
+
+          <div *ngIf="!this.movieDetails">
+            <p>No trailers to show</p>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Similar Movies" >
+          <div class="cast-container" *ngIf="this.movieResponse">
+            <mat-grid-list class="content-container" cols="4" gutterSize="20">
+              <div *ngFor="let movie of this.movieResponse.results" >
+                <mat-grid-tile  *ngIf="movie.poster_path" >
+                  <a  routerLink="/movie/{{movie.id}}">
+                  <img  class="cast-image" mat-card-image src="https://image.tmdb.org/t/p/w185{{movie.poster_path}}" />
+                  <mat-grid-tile-footer>{{movie.title}}</mat-grid-tile-footer>
+                  </a>
+                </mat-grid-tile>
+              </div>
+            </mat-grid-list>
+          </div>
+        </mat-tab>
+
+      </mat-tab-group>
+    </div>
+  </div>
+</div>
