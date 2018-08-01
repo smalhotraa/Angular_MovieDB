@@ -8,9 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HomeviewComponent } from './homeview/homeview.component';
-import { MatSidenavModule, MatToolbarModule } from '@angular/material';
+import {MatIconModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIcon} from '@angular/material';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
@@ -27,7 +26,6 @@ import {MatTabsModule} from '@angular/material/tabs';
     LoginComponent,
     HomeComponent,
     HomeviewComponent,
-    MatIcon,
     MoviedetailComponent
 ],
   imports: [
@@ -43,7 +41,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatListModule,
     InfiniteScrollModule,
     MatProgressBarModule,
-    MatTabsModule
+    MatTabsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

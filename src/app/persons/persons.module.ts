@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PersonsRoutingModule } from './persons-routing.module';
 import { PersonsListComponent } from './persons-list/persons-list.component';
-import {MatIcon, MatSidenavModule, MatToolbarModule} from '@angular/material';
+import { MatToolbarModule } from '@angular/material';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
